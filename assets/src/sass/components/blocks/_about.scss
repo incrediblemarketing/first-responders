@@ -1,0 +1,48 @@
+.block-about {
+  position: relative;
+  background: #041c4a;
+  overflow: hidden;
+  z-index: 0;
+
+  .image--holder {
+    @include pseudo_cover();
+    z-index: -1;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      opacity: 0.25;
+    }
+  }
+
+  .padding--section {
+    padding: 273px 0 192px;
+  }
+
+  svg {
+    margin-bottom: 17px;
+  }
+
+  h2 {
+    margin-top: 18px;
+    margin-bottom: 35px;
+  }
+  .d-flex {
+    img {
+      margin-right: 20px;
+    }
+  }
+  .title {
+    font-size: 17rem;
+    line-height: 1.2em;
+    font-weight: 800;
+    -webkit-text-stroke: 1px #636363;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    bottom: -11vh;
+    left: 6.09%;
+    white-space: nowrap;
+    z-index: 2-1;
+  }
+}

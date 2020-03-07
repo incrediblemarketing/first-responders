@@ -1,0 +1,62 @@
+.block-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 50px;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.23em;
+    margin-bottom: 60px;
+  }
+  .btn {
+    margin-bottom: 117px;
+  }
+  .image--holder {
+    @include absolute_cover;
+    background: $red;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      opacity: 0.75;
+    }
+  }
+  a.js-scroll-to {
+    display: inline-block;
+    margin-left: 100px;
+
+    .more {
+      height: 131px;
+      display: flex;
+      align-items: center;
+      width: 100px;
+      p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 1.75em;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: $white;
+        margin: 0;
+      }
+
+      .line {
+        margin: 0 20px 0 0;
+        animation: scrollDown 4s infinite ease-out;
+        transform-origin: center top;
+        width: 1px;
+        height: 100%;
+        border-left: 1px solid $white;
+      }
+    }
+  }
+}

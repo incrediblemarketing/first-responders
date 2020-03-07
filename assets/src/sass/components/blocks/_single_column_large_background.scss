@@ -1,0 +1,46 @@
+.block-single_column_large_background {
+  position: relative;
+  background: #041c4a;
+  overflow: hidden;
+
+  .image--holder {
+    @include absolute_cover();
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      opacity: 0.75;
+      height: 100%;
+    }
+    &::after {
+      @include pseudo_cover();
+      background: linear-gradient(
+        180deg,
+        rgba(32, 32, 32, 0.0001) 0%,
+        #202020 100%
+      );
+      opacity: 0.32;
+    }
+  }
+  .padding--section {
+    padding: 692px 0 145px;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  h5 {
+    font-size: 18px;
+    line-height: 1.19em;
+    letter-spacing: 2.25px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5em;
+  }
+}
