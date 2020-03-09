@@ -1,6 +1,6 @@
 <?php
 /**
- * Display Single Column Large Background Block
+ * Display Homepage Gallery Block
  *
  * @category   Components
  * @package    WordPress
@@ -11,8 +11,9 @@
  * @since      1.0.0
  */
 
-$content = get_sub_field( 'content' );
-$image   = get_sub_field( 'background_image' );
+$content       = get_sub_field( 'content' );
+$content_title = get_sub_field( 'title' );
+$image         = get_sub_field( 'background_image' );
 ?>
 
 <?php if ( ! empty( $image ) ) : ?>
@@ -24,7 +25,8 @@ $image   = get_sub_field( 'background_image' );
 <div class="container-fluid">
 	<div class="row padding--section">
 		<div class="col-xl-6 offset-xl-1">
-			<div class="fade-in-left">
+			<div class="fade-in-left content--area">
+				<h2><?php echo $content_title; ?></h2>
 				<?php echo $content; ?>
 			</div>
 		</div>

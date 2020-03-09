@@ -12,6 +12,7 @@ assets/dist/*
 *.zip
 buildtheme/*
 .vscode
+imtheme/*
 
 # Node #
 ######################

@@ -18,7 +18,7 @@ add_image_size( 'background_thumb', 1430, 569, true );
 add_image_size( 'hero_thumb', 1920, 1080, true );
 add_image_size( 'page_header_thumb', 1920, 548, true );
 add_image_size( 'blog_row_thumb', 370, 223, true );
-add_image_size( 'post_large', 1430, 796, true );
+add_image_size( 'video_thumb', 1170, 658, true );
 
 /**
  * Add Image Sizes to Array
@@ -36,7 +36,7 @@ function im_image_sizes( $sizes ) {
 			'hero_thumb'         => __( 'Hero Thumbnail' ),
 			'page_header_thumb'  => __( 'Page Header Thumbnail' ),
 			'blog_row_thumb'     => __( 'Blog Row Thumbnail' ),
-			'post_large'         => __( 'Post Large' ),
+			'video_thumb'        => __( 'Post Large' ),
 		)
 	);
 }
@@ -98,7 +98,7 @@ function im_get_all_image_sizes() {
 			'width'  => 370,
 			'height' => 223,
 		),
-		'post_large'         => array(
+		'video_thumb'        => array(
 			'width'  => 1430,
 			'height' => 796,
 		),

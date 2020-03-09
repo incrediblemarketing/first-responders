@@ -8,9 +8,7 @@
     @include pseudo_cover();
     z-index: -1;
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
+      @include absolute_cover;
       object-fit: cover;
       opacity: 0.25;
     }

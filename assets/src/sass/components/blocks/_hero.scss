@@ -23,9 +23,7 @@
     @include absolute_cover;
     background: $red;
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
+      @include absolute_cover;
       object-fit: cover;
       opacity: 0.75;
     }

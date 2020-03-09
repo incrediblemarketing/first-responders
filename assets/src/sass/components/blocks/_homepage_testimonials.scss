@@ -1,0 +1,128 @@
+.block-homepage_testimonials {
+  .image--holder {
+    @include absolute_cover;
+    img {
+      @include absolute_cover;
+      object-fit: cover;
+    }
+  }
+  .content--top {
+    position: relative;
+    padding: 307px 0 532px;
+    text-align: center;
+
+    h2 {
+      color: $slight_black;
+      @extend h2.large;
+      line-height: 1.02em;
+      margin-bottom: 90px;
+    }
+  }
+  .content--middle {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    .swiper-slide {
+      width: 1170px;
+      height: auto;
+      position: relative;
+
+      .btn-play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 50px;
+        width: 70px;
+        font-size: 18px;
+        background: rgba($black, 0.7);
+        color: $white;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.22);
+      }
+    }
+  }
+  .content--bottom {
+    position: relative;
+    padding: 486px 0 230px;
+
+    h3 {
+      text-align: center;
+      font-size: 2.75rem;
+      line-height: 1.218em;
+      font-weight: 300;
+      margin-bottom: 65px;
+
+      strong {
+        display: block;
+        font-weight: 800;
+      }
+    }
+
+    .testimonial--slider {
+      overflow: visible;
+    }
+
+    .swiper-slide {
+      padding-left: 62px;
+      padding-right: 30px;
+      opacity: 0;
+
+      &.swiper-slide-active,
+      &.swiper-slide-next,
+      &.swiper-slide-prev {
+        opacity: 1;
+      }
+
+      h5 {
+        font-size: 1rem;
+        line-height: 1.2em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .quote--left {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .stars {
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.47em;
+        color: $off_white;
+      }
+    }
+  }
+
+  .swiper-nav-container {
+    width: calc(100% + 200px);
+    display: block;
+    left: -100px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      background: unset !important;
+      font-size: 40px;
+      width: 49px;
+      height: 13px;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+}

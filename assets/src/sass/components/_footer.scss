@@ -1,1 +1,93 @@
-.im-logo {height:1em; display:inline-block; margin-top:-.1em; fill:currentColor; vertical-align:middle;}
+.im-logo {
+  height: 1em;
+  display: inline-block;
+  margin-top: -0.1em;
+  padding: 2px;
+  fill: $white;
+  vertical-align: middle;
+  background: $magenta;
+  border-radius: 100em;
+}
+
+.block--contact-us {
+  position: relative;
+  padding: 230px 0;
+
+  .image--holder {
+    @include absolute_cover;
+
+    img {
+      @include absolute_cover;
+      object-fit: cover;
+    }
+  }
+
+  h3 {
+    @extend h2.large;
+    line-height: 1.02em;
+    margin: 0;
+  }
+
+  .contact--flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 62px;
+
+    .item {
+      p {
+        padding-left: 40px;
+        margin-bottom: 45px;
+      }
+      .social-icons {
+        padding-left: 40px;
+      }
+      i {
+        position: relative;
+        margin-left: -40px;
+        margin-right: 16px;
+        width: 20px;
+        text-align: center;
+      }
+      &:first-child {
+        padding-right: 65px;
+      }
+      &:last-child {
+        padding-left: 65px;
+      }
+    }
+  }
+  .form--holder {
+    background: $white;
+    color: $slight_black;
+    padding: 80px;
+    margin: 0 120px;
+  }
+}
+
+footer {
+  background: $black;
+  padding: 36px 375px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $white;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: $off_white;
+  .color-flag {
+    margin-right: 178px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $white;
+    &:hover {
+      color: $off_white;
+    }
+  }
+}
