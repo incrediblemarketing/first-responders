@@ -24,7 +24,7 @@ $business_phone_url     = get_field( 'business_phone_url', 'options' );
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xl-6 offset-xl-1">
+		<div class="col-xxl-6 offset-xl-1 col-xl-7 col-lg-8">
 			<?php echo $content; ?>
 			<?php if ( $business_phone_display && $business_phone_url ) : ?>
 				<a class="btn btn-primary" href="tel:<?php echo esc_attr( $business_phone_url ); ?>">Call <?php echo esc_attr( $business_phone_display ); ?></a>

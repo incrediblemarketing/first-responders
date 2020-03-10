@@ -21,7 +21,11 @@
     }
   }
   .padding--section {
-    padding: 692px 0 145px;
+    padding: 43vh 0 14vh;
+
+    @include mq(lg) {
+      padding: 63vh 0 14vh;
+    }
   }
 
   h2 {

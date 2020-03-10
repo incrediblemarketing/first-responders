@@ -4,20 +4,27 @@
   width: 100%;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 50px;
+  padding-bottom: 5vh;
+  @include mq($until: md) {
+    text-align: center;
+  }
 
   h1 {
-    margin-bottom: 30px;
+    margin-bottom: 3vh;
   }
 
   p {
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.23em;
-    margin-bottom: 60px;
+    margin-bottom: 4vh;
+    @include mq(xxl) {
+      font-size: 1.5rem;
+      margin-bottom: 6vh;
+    }
   }
   .btn {
-    margin-bottom: 117px;
+    margin-bottom: 11vh;
   }
   .image--holder {
     @include absolute_cover;
@@ -26,17 +33,26 @@
       @include absolute_cover;
       object-fit: cover;
       opacity: 0.75;
+      @include mq($until: sm) {
+        object-position: 42%;
+      }
     }
   }
   a.js-scroll-to {
     display: inline-block;
-    margin-left: 100px;
+
+    @include mq(md) {
+      margin-left: 100px;
+    }
 
     .more {
-      height: 131px;
+      height: 13vh;
       display: flex;
       align-items: center;
-      width: 100px;
+      width: 1px;
+      @include mq(md) {
+        width: 100px;
+      }
       p {
         font-weight: normal;
         font-size: 16px;

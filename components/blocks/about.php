@@ -26,11 +26,11 @@ $gallery     = get_sub_field( 'certifications' );
 
 <div class="container-fluid">
 	<div class="row padding--section">
-		<div class="col-xl-4 offset-xl-1">
-			<h2 class="large">About<br/>us</h2>
+		<div class="col-xxl-4 offset-xl-1 col-xl-5 col-md-6">
+			<h2 class="large">About <br/>us</h2>
 			<?php echo $content_1; ?>
 		</div>
-		<div class="col-xl-4">
+		<div class="col-xxl-4 col-xl-5 col-md-6">
 			<?php get_template_part( 'components/svg/large-flag' ); ?>
 			<?php echo $content_2; ?>
 			<?php if ( $gallery ) : ?>

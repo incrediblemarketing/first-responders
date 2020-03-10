@@ -23,7 +23,7 @@ $image   = get_sub_field( 'background_image' );
 
 <div class="container-fluid">
 	<div class="row padding--section">
-		<div class="col-xl-6 offset-xl-1">
+		<div class="col-xxl-6 offset-xl-1 col-xl-7">
 			<div class="fade-in-left">
 				<?php echo $content; ?>
 			</div>

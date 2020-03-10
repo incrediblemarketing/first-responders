@@ -167,14 +167,40 @@
               modifier: 1,
               slideShadows: true
             },
+            breakpoints: {
+              640: {
+                coverflowEffect: {
+                  stretch: 50
+                }
+              },
+              768: {
+                coverflowEffect: {
+                  stretch: 200
+                }
+              }
+            },
             pagination: {
               el: ".swiper-pagination"
             }
           });
+
           var testimonials = new Swiper(".testimonial--slider", {
             loop: true,
-            centeredSlides: true,
             slidesPerView: 3,
+            centeredSlides: true,
+            breakpoints: {
+              640: {
+                slidesPerView: 1
+              },
+              768: {
+                slidesPerView: 2,
+                centeredSlides: false
+              },
+              1200: {
+                centeredSlides: true,
+                slidesPerView: 3
+              }
+            },
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev"

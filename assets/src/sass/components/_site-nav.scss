@@ -1,12 +1,20 @@
 .site-nav {
   display: flex;
   width: 100%;
-  padding: 56px 70px;
+  padding: 5vh 4vw;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
   justify-content: space-between;
+  transition: all 0.6s ease-in-out;
+
+  .logo {
+    svg {
+      transition: all 0.6s ease-in-out;
+      max-width: 201px;
+    }
+  }
 
   button {
     display: none;
@@ -20,6 +28,33 @@
     }
   }
   &.sticky {
-    mix-blend-mode: exclusion;
+    @include mq(md) {
+      mix-blend-mode: exclusion;
+    }
+
+    @include mq($until: md) {
+      padding: 15px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 30vw;
+        height: 30vw;
+        background: rgba(#041c4a, 0.95);
+        border-radius: 100em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-5vw, -10vw);
+        z-index: -1;
+      }
+      svg {
+        max-width: 20vw;
+        height: auto;
+      }
+    }
+    @include mq($until: sm) {
+      padding: 15px 5px;
+    }
   }
 }

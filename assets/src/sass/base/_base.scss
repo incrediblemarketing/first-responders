@@ -62,15 +62,33 @@ h5 {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 1.8rem;
   line-height: 1em;
+  @include mq(md) {
+    font-size: 3.5rem;
+  }
+  @include mq(xxl) {
+    font-size: 4.5rem;
+  }
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 1.5rem;
   line-height: 1.2em;
+  @include mq(md) {
+    font-size: 2.2rem;
+  }
+  @include mq(xxl) {
+    font-size: 3rem;
+  }
   &.large {
-    font-size: 7rem;
+    font-size: 3rem;
     line-height: 0.8em;
+    @include mq(md) {
+      font-size: 5rem;
+    }
+    @include mq(xxl) {
+      font-size: 7rem;
+    }
   }
 }

@@ -15,16 +15,27 @@
   }
 
   .padding--section {
-    padding: 273px 0 192px;
+    padding: 25vh 0 19vh;
   }
 
   svg {
     margin-bottom: 17px;
+    max-width: 100%;
+    height: auto;
+    @include mq($until: md) {
+      margin: 35px 0;
+    }
   }
 
   h2 {
     margin-top: 18px;
     margin-bottom: 35px;
+
+    br {
+      @include mq($until: md) {
+        display: none !important;
+      }
+    }
   }
   .d-flex {
     img {
@@ -32,13 +43,14 @@
     }
   }
   .title {
-    font-size: 17rem;
+    font-size: 18vw;
     line-height: 1.2em;
     font-weight: 800;
     -webkit-text-stroke: 1px #636363;
     -webkit-text-fill-color: transparent;
     position: absolute;
-    bottom: -11vh;
+    bottom: 0;
+    transform: translateY(25%);
     left: 6.09%;
     white-space: nowrap;
     z-index: 2-1;

@@ -11,7 +11,11 @@
 
 .block--contact-us {
   position: relative;
-  padding: 230px 0;
+  padding: 150px 0;
+
+  @include mq(xl) {
+    padding: 21vh 0;
+  }
 
   .image--holder {
     @include absolute_cover;
@@ -25,19 +29,28 @@
   h3 {
     @extend h2.large;
     line-height: 1.02em;
-    margin: 0;
+    margin-bottom: 25px;
+
+    @include mq(md) {
+      margin: 0;
+    }
   }
 
   .contact--flex {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
     margin-bottom: 62px;
+
+    @include mq(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @include mq(xl) {
+      align-items: center;
+    }
 
     .item {
       p {
-        padding-left: 40px;
         margin-bottom: 45px;
+        padding-left: 40px;
       }
       .social-icons {
         padding-left: 40px;
@@ -50,38 +63,61 @@
         text-align: center;
       }
       &:first-child {
-        padding-right: 65px;
+        @include mq(md) {
+          padding-right: 65px;
+        }
       }
       &:last-child {
-        padding-left: 65px;
+        @include mq(md) {
+          padding-left: 65px;
+        }
       }
     }
   }
   .form--holder {
-    background: $white;
     color: $slight_black;
-    padding: 80px;
-    margin: 0 120px;
+    padding: 25px;
+    background: $white;
+    @include mq(md) {
+      padding: 80px;
+      margin: 0 6vw;
+    }
   }
 }
 
 footer {
   background: $black;
-  padding: 36px 375px;
-  display: flex;
+  padding: 36px 15px;
+  display: block;
   align-items: center;
   justify-content: space-between;
   color: $white;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 28px;
   text-align: center;
   color: $off_white;
+
+  @include mq(lg) {
+    font-size: 16px;
+    display: flex;
+    padding: 36px 10vw;
+  }
+
+  @include mq(xxl) {
+    padding: 36px 19vw;
+  }
   .color-flag {
-    margin-right: 178px;
+    margin-right: 17px;
+    @include mq(xl) {
+      margin-right: 178px;
+    }
   }
 
   p {
-    margin: 0;
+    margin-top: 15px;
+    @include mq(lg) {
+      margin: 0;
+    }
   }
 
   a {

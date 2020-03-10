@@ -8,9 +8,16 @@
   }
   .content--top {
     position: relative;
-    padding: 307px 0 532px;
+    padding: 80px 0 150px;
     text-align: center;
 
+    @include mq(md) {
+      padding: 200px 0 300px;
+    }
+
+    @include mq(xl) {
+      padding: 28vh 0 48vh;
+    }
     h2 {
       color: $slight_black;
       @extend h2.large;
@@ -24,12 +31,26 @@
     width: 100%;
     transform: translateY(-50%);
     z-index: 2;
+    margin: 0;
 
     .swiper-slide {
-      width: 1170px;
+      width: 80vw;
       height: auto;
       position: relative;
 
+      @include mq(md) {
+        width: 60vw;
+      }
+
+      .image__holder--video {
+        display: block;
+        width: 100%;
+        height: auto;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
       .btn-play {
         position: absolute;
         top: 50%;
@@ -50,14 +71,28 @@
   }
   .content--bottom {
     position: relative;
-    padding: 486px 0 230px;
+    padding: 150px 0 120px;
+
+    @include mq(sm) {
+      padding: 200px 0 140px;
+    }
+    @include mq(md) {
+      padding: 300px 0 200px;
+    }
+    @include mq(xl) {
+      padding: 44vh 0 23vh;
+    }
 
     h3 {
       text-align: center;
-      font-size: 2.75rem;
+      font-size: 1.5rem;
       line-height: 1.218em;
       font-weight: 300;
       margin-bottom: 65px;
+
+      @include mq(md) {
+        font-size: 2.75rem;
+      }
 
       strong {
         display: block;
@@ -114,6 +149,18 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 9;
+
+    @include mq($until: lg) {
+      width: 200px;
+      display: block;
+      left: 50%;
+      height: 1px;
+      position: absolute;
+      top: 120%;
+      -webkit-transform: translateY(-50%);
+      transform: translateX(-50%);
+      z-index: 9;
+    }
 
     .swiper-button-next,
     .swiper-button-prev {
