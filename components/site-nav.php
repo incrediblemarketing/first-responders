@@ -18,9 +18,9 @@
 		<?php get_template_part( 'components/svg/logo' ); ?>
 	</a>
 
+	<?php get_template_part( 'components/call' ); ?>
 	<button data-toggle="menu">
-		<span></span>
-		<span></span>
-		<span></span>
+		<p>Menu</p>
+		<?php get_template_part( 'components/svg/flag' ); ?>
 	</button>
 </nav>

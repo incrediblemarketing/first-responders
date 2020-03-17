@@ -43,6 +43,49 @@
             "mime_types": ""
         },
         {
+            "key": "field_5e7026dee98fe",
+            "label": "Contact Block Image",
+            "name": "contact_block_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e70274025937",
+            "label": "Contact Block Text",
+            "name": "contact_block_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_5b69c1c245d56",
             "label": "Block Defaults",
             "name": "",
@@ -557,5 +600,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1583787404
+    "modified": 1584408920
 }

@@ -1,0 +1,53 @@
+.block--frw {
+  position: relative;
+  background: #041c4a;
+  overflow: hidden;
+  padding: 626px 0 60px;
+  color: $white;
+  text-align: center;
+  z-index: 0;
+
+  .image--holder {
+    @include absolute_cover;
+    z-index: 0;
+    img {
+      @include absolute_cover;
+      object-fit: cover;
+      z-index: -2;
+      opacity: 0.5;
+    }
+    &::after {
+      @include pseudo_cover();
+      background: linear-gradient(
+        180deg,
+        rgba(32, 32, 32, 0.0001) 0%,
+        #202020 100%
+      );
+      mix-blend-mode: normal;
+      opacity: 0.39;
+      z-index: -1;
+    }
+  }
+
+  .container {
+    h2 {
+      margin-bottom: 22px;
+      padding-bottom: unset;
+      &::after {
+        display: none;
+      }
+    }
+    p {
+      font-size: 0.9rem;
+      line-height: 1.555em;
+    }
+  }
+  .line {
+    margin: 0 auto 30px;
+    animation: scrollDown 4s infinite ease-out;
+    transform-origin: center top;
+    width: 1px;
+    height: 60px;
+    border-left: 1px solid $white;
+  }
+}

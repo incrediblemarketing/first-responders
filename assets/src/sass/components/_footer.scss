@@ -12,6 +12,7 @@
 .block--contact-us {
   position: relative;
   padding: 150px 0;
+  color: $white;
 
   @include mq(xl) {
     padding: 21vh 0;

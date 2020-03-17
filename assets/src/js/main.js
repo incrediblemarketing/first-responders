@@ -27,7 +27,7 @@
         },
         siteNavSticky: function() {
           $cache.window.scroll(function() {
-            if ($cache.window.scrollTop() > $cache.window.height()) {
+            if ($cache.window.scrollTop() > 0) {
               $cache.siteNav.addClass("sticky");
             } else {
               $cache.siteNav.removeClass("sticky");

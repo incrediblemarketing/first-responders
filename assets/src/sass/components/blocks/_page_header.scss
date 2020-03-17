@@ -1,0 +1,44 @@
+.block-page_header {
+  position: relative;
+  background: #041c4a;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 59px;
+  color: $white;
+
+  .image--holder {
+    @include absolute_cover;
+    img {
+      @include absolute_cover;
+      object-fit: cover;
+    }
+    &::after {
+      @include pseudo_cover();
+      background: linear-gradient(
+        180deg,
+        rgba(32, 32, 32, 0.0001) 0%,
+        #202020 100%
+      );
+      opacity: 0.46;
+    }
+  }
+  h1 {
+    position: relative;
+    left: -100px;
+
+    body:not(.home) & {
+      font-size: 3rem;
+      line-height: 1.21em;
+      margin-bottom: 28px;
+    }
+  }
+  .content--1 {
+    padding-right: 30px;
+  }
+  .content--2 {
+    padding-left: 30px;
+    margin-top: calc(3.65rem + 28px);
+  }
+}

@@ -25,14 +25,10 @@ $gallery     = get_sub_field( 'certifications' );
 <?php endif; ?>
 
 <div class="container-fluid">
+	<?php get_template_part( 'components/svg/large-flag' ); ?>
 	<div class="row padding--section">
-		<div class="col-xxl-4 offset-xl-1 col-xl-5 col-md-6">
-			<h2 class="large">About <br/>us</h2>
+		<div class="col-xxl-4 offset-xl-1 col-xl-5 col-md-6 content--1">
 			<?php echo $content_1; ?>
-		</div>
-		<div class="col-xxl-4 col-xl-5 col-md-6">
-			<?php get_template_part( 'components/svg/large-flag' ); ?>
-			<?php echo $content_2; ?>
 			<?php if ( $gallery ) : ?>
 				<div class="d-flex">
 					<?php foreach ( $gallery as $gallery_image ) : ?>
@@ -40,6 +36,9 @@ $gallery     = get_sub_field( 'certifications' );
 					<?php endforeach; ?>
 				</div>
 			<?php endif; ?>
+		</div>
+		<div class="col-xxl-4 col-xl-5 col-md-6 content--2">
+			<?php echo $content_2; ?>
 		</div>
 	</div>
 </div>

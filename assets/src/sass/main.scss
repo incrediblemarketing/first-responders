@@ -42,8 +42,12 @@
 // Blocks
 // ==========================================================================
 @import "components/blocks/blocks";
+@import "components/blocks/contact-frw";
 
 /*block_insert*/
+@import "components/blocks/page_header";
+@import "components/blocks/two_column_no_background";
+@import "components/blocks/single_page_column";
 @import "components/blocks/homepage_gallery";
 @import "components/blocks/homepage_quote";
 @import "components/blocks/homepage_testimonials";

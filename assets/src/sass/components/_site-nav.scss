@@ -1,23 +1,113 @@
 .site-nav {
   display: flex;
   width: 100%;
-  padding: 5vh 4vw;
   position: fixed;
+  align-items: center;
   top: 0;
   left: 0;
   z-index: 999;
   justify-content: space-between;
   transition: all 0.6s ease-in-out;
+  height: 116px;
+  padding: 3vh 15px;
+  @include mq(sm) {
+    padding: 3vh 4vw;
+    height: auto;
+  }
+  @include mq(md) {
+    padding: 5vh 4vw;
+    height: 186px;
+  }
+
+  @include mq(lg) {
+    padding: 4vh 4vw;
+  }
+  @include mq(xl) {
+    padding: 5vh 4vw;
+  }
 
   .logo {
+    display: block;
+    height: 100%;
     svg {
       transition: all 0.6s ease-in-out;
-      max-width: 201px;
+      max-width: 160px;
+      width: auto;
+      @include mq(md) {
+        max-width: 201px;
+      }
+
+      path {
+        fill: $blue;
+      }
+    }
+    body:not(.home) & {
+      svg {
+        path {
+          fill: $white;
+        }
+      }
     }
   }
 
+  .btn-primary {
+    margin: 0 0 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border: 0;
+    transition: all 0.6s ease-in-out;
+    height: 60px;
+
+    @include mq(md) {
+      height: 75px;
+    }
+
+    i {
+      height: 60px;
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mq(md) {
+        height: 75px;
+        width: 75px;
+        border-right: 1px solid rgba(#333, 0.25);
+      }
+    }
+    span {
+      padding: 25px 50px 25px 40px;
+      display: none;
+      @include mq(md) {
+        display: block;
+      }
+    }
+  }
   button {
     display: none;
+    align-items: center;
+    justify-content: center;
+    width: 218px;
+    height: 75px;
+    background: $black;
+    border: 0;
+
+    p {
+      color: $white;
+      text-transform: uppercase;
+      margin: 0 20px 0 0;
+      font-family: $proxima_nova;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 28px;
+      letter-spacing: 3px;
+    }
+
+    svg {
+      height: 38px;
+      width: auto;
+    }
   }
 
   // offset if WP admin bar is present
@@ -28,33 +118,42 @@
     }
   }
   &.sticky {
+    background: #efefef;
+    padding: 5px 15px;
+    height: 75px;
+
     @include mq(md) {
-      mix-blend-mode: exclusion;
+      padding: 5px 25px;
     }
 
-    @include mq($until: md) {
-      padding: 15px;
+    .btn-primary,
+    button {
+      height: 65px;
+    }
 
-      &::before {
-        content: "";
-        display: block;
-        width: 30vw;
-        height: 30vw;
-        background: rgba(#041c4a, 0.95);
-        border-radius: 100em;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(-5vw, -10vw);
-        z-index: -1;
+    .btn-primary {
+      border: 1px solid $blue;
+      i {
+        height: 65px;
+        width: 65px;
       }
+      span {
+        padding: 0 25px;
+      }
+    }
+    .logo {
+      height: 100%;
       svg {
-        max-width: 20vw;
-        height: auto;
+        height: 100%;
+        width: auto;
       }
     }
-    @include mq($until: sm) {
-      padding: 15px 5px;
+    body:not(.home) & {
+      svg {
+        path {
+          fill: $blue;
+        }
+      }
     }
   }
 }

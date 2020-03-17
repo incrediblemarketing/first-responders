@@ -8,6 +8,11 @@ body {
   font-size: 1rem;
   line-height: 1.5em;
   color: $white;
+
+  &:not(.home) {
+    font-size: 0.8rem;
+    color: $slight_black;
+  }
 }
 
 *:last-child {
@@ -89,6 +94,24 @@ h2 {
     }
     @include mq(xxl) {
       font-size: 7rem;
+    }
+  }
+  body:not(.home) & {
+    font-size: 2rem;
+    line-height: 1.225em;
+    padding-bottom: 1em;
+    margin-bottom: 51px;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      width: 370px;
+      height: 0;
+      max-width: 100%;
+      border-bottom: 1px solid #dddddd;
+      position: absolute;
+      bottom: 0;
+      left: 0;
     }
   }
 }

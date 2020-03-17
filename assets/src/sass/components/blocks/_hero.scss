@@ -28,14 +28,12 @@
   }
   .image--holder {
     @include absolute_cover;
-    background: $red;
+    background: $blue;
     img {
       @include absolute_cover;
       object-fit: cover;
-      opacity: 0.75;
-      @include mq($until: sm) {
-        object-position: 42%;
-      }
+      opacity: 0.9;
+      object-position: left;
     }
   }
   a.js-scroll-to {

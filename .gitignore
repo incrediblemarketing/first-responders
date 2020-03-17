@@ -13,6 +13,7 @@ assets/dist/*
 buildtheme/*
 .vscode
 imtheme/*
+vendor/*
 
 # Node #
 ######################
