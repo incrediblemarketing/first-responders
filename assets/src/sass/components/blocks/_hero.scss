@@ -33,7 +33,10 @@
       @include absolute_cover;
       object-fit: cover;
       opacity: 0.9;
-      object-position: left;
+      object-position: 66%;
+      @include mq(lg) {
+        object-position: right;
+      }
     }
   }
   a.js-scroll-to {
