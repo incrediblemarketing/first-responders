@@ -21,7 +21,9 @@
 	$phone_url    = get_field( 'business_phone_url', 'option' );
 	$image        = get_field( 'footer_background_image', 'option' )
 ?>
-<?php get_template_part( 'components/contact-frw' ); ?>
+<?php if ( ! is_front_page() ) : ?>
+	<?php get_template_part( 'components/contact-frw' ); ?>
+<?php endif; ?>
 <section class="block block--contact-us">
 	<?php if ( ! empty( $image ) ) : ?>
 		<div class="image--holder">
