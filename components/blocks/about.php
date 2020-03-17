@@ -19,13 +19,13 @@ $gallery     = get_sub_field( 'certifications' );
 ?>
 
 <?php if ( ! empty( $image ) ) : ?>
-	<div class="image--holder">
+	<!--<div class="image--holder">
 		<img src="<?php echo esc_url( $image['sizes']['hero_thumb'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
-	</div>
+	</div>-->
 <?php endif; ?>
 
 <div class="container-fluid">
-	<?php get_template_part( 'components/svg/large-flag' ); ?>
+	<?php get_template_part( 'components/svg/flag' ); ?>
 	<div class="row padding--section">
 		<div class="col-xxl-4 offset-xl-1 col-xl-5 col-md-6 content--1">
 			<?php echo $content_1; ?>
