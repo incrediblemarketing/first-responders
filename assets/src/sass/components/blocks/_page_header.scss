@@ -27,6 +27,7 @@
   h1 {
     position: relative;
     left: -100px;
+    width: calc(100% + 100px);
 
     body:not(.home) & {
       font-size: 3rem;

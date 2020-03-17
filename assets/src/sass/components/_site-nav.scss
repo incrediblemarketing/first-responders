@@ -41,13 +41,6 @@
         fill: $white;
       }
     }
-    body:not(.home) & {
-      svg {
-        path {
-          fill: $white;
-        }
-      }
-    }
   }
 
   .btn-primary {

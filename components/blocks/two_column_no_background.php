@@ -18,12 +18,20 @@ $block_title = get_sub_field( 'title' );
 
 <div class="container">
 	<div class="row padding--section">
-		<div class="col-lg-6 content--1">
+		<div class="col-12">
 			<h2><?php echo esc_attr( $block_title ); ?></h2>
-			<?php echo $content_1; ?>
 		</div>
-		<div class="col-lg-6 content--2">
-			<?php echo $content_2; ?>
-		</div>
+		<?php if ( ! empty( $content_2 ) ) : ?>
+			<div class="col-lg-6 content--1">
+				<?php echo $content_1; ?>
+			</div>
+			<div class="col-lg-6 content--2">
+				<?php echo $content_2; ?>
+			</div>
+		<?php else : ?>
+			<div class="col-12 content--1">
+				<?php echo $content_1; ?>
+			</div>
+		<?php endif; ?>
 	</div>
 </div>
