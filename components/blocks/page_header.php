@@ -13,7 +13,7 @@
 
 $content_1 = get_sub_field( 'content_1' );
 $content_2 = get_sub_field( 'content_2' );
-$image     = get_sub_field( 'background_image' );
+$image     = get_sub_field( 'background_image' ) ?: get_field( 'header_image', 'options' );
 ?>
 
 <?php if ( ! empty( $image ) ) : ?>

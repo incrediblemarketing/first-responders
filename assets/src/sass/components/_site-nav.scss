@@ -78,13 +78,14 @@
     }
   }
   button {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 218px;
     height: 75px;
     background: $black;
     border: 0;
+    cursor: pointer;
 
     p {
       color: $white;
@@ -100,6 +101,10 @@
     svg {
       height: 38px;
       width: auto;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
@@ -142,9 +147,11 @@
       }
     }
 
-    svg {
-      path {
-        fill: $blue;
+    .logo {
+      svg {
+        path {
+          fill: $blue;
+        }
       }
     }
   }

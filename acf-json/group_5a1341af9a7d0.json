@@ -1972,9 +1972,9 @@
                         },
                         {
                             "key": "field_5e66a5bcf6eea",
-                            "label": "Background Image",
-                            "name": "background_image",
-                            "type": "image",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "gallery",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1984,8 +1984,11 @@
                                 "id": ""
                             },
                             "return_format": "array",
-                            "preview_size": "thumbnail",
+                            "preview_size": "medium",
+                            "insert": "append",
                             "library": "all",
+                            "min": "",
+                            "max": "",
                             "min_width": "",
                             "min_height": "",
                             "min_size": "",
@@ -2431,5 +2434,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1584482305
+    "modified": 1584560760
 }

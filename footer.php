@@ -58,7 +58,6 @@
 <footer>
 	<?php get_template_part( 'components/svg/flag' ); ?>
 	<p>Copyright &copy; <?php echo esc_attr( gmdate( 'Y' ) ); ?> <?php echo esc_attr( $copyright ) ?: esc_attr( get_bloginfo() ); ?>. All Rigths Reserved.</p>
-	<p>Designed By <a href="https://www.incrediblemarketing.com/" target="_blank"><?php get_template_part( 'components/svg/incredible-marketing' ); ?>Incredible Marketing</a></p>
 </footer>
 </div><!-- end of .site-wrap -->
 

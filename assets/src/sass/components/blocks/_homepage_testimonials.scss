@@ -6,6 +6,7 @@
       object-fit: cover;
     }
   }
+
   .content--top {
     position: relative;
     padding: 80px 0 150px;
@@ -171,5 +172,9 @@
       margin: 0;
       cursor: pointer;
     }
+  }
+
+  .swiper-pagination {
+    display: none !important;
   }
 }

@@ -13,12 +13,19 @@
 
 $content       = get_sub_field( 'content' );
 $content_title = get_sub_field( 'title' );
-$image         = get_sub_field( 'background_image' );
+$image         = get_sub_field( 'image' );
 ?>
 
-<?php if ( ! empty( $image ) ) : ?>
-	<div class="image--holder">
-		<img src="<?php echo esc_url( $image['sizes']['hero_thumb'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+<?php if ( $image ) : ?>
+	<div class="swiper-container homepage--gallery">
+			<div class="swiper-wrapper">
+		<?php foreach ( $image as $single_image ) : ?>
+			<div class="swiper-slide">
+				<img src="<?php echo $single_image['sizes']['hero_thumb']; ?>" />
+			</div>
+		<?php endforeach; ?>
+				</div>
+				<?php get_template_part('components/swiper-nav'); ?>
 	</div>
 <?php endif; ?>
 

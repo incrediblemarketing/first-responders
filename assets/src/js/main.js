@@ -23,7 +23,8 @@
           this.dataCss();
           this.scrollMagic();
           this.siteNavSticky();
-          this.swiperSetup();
+					this.swiperSetup();
+					this.mobileMenu();
         },
         siteNavSticky: function() {
           $cache.window.scroll(function() {
@@ -68,7 +69,8 @@
             0.1
           );
 
-          $('[data-toggle="menu"]').on("click", function() {
+          $('button[data-toggle="menu"]').on("click", function() {
+						console.log("this clicked");
             tl.reversed() ? tl.play() : tl.reverse();
           });
         },
@@ -205,6 +207,18 @@
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev"
             }
+          });
+					
+					var gallery = new Swiper(".homepage--gallery", {
+            loop: true,
+            slidesPerView: 1,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev"
+						},
+						pagination: {
+							el: '.swiper-pagination',
+						},
           });
         }
       }

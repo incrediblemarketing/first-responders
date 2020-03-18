@@ -12,7 +12,7 @@
  */
 
 $image = get_field( 'contact_block_image', 'option' );
-$text  = get_field( 'contact_block_text', 'option' );
+$text  = get_field( 'bottom_block_text' ) ;
 ?>
 
 <section class="block block--frw">
@@ -24,6 +24,7 @@ $text  = get_field( 'contact_block_text', 'option' );
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-10 col-12">
+				<h2>Contact<br/>First Responders Wellness</h2>
 				<?php echo $text; ?>
 				<div class="line"></div>
 			</div>
