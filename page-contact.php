@@ -17,7 +17,7 @@ $address2     = get_field( 'business_city_state_zip', 'option' );
 $address_link = get_field( 'business_address_link', 'option' );
 $phone        = get_field( 'business_phone_display', 'option' );
 $phone_url    = get_field( 'business_phone_url', 'option' );
-$image        = get_sub_field( 'background_image' ) ?: get_field( 'header_image', 'options' );
+$image        = get_field( 'page_header_background_image' ) ?: get_field( 'header_image', 'options' );
 ?>
 
 <section class="block block--contact-page">
