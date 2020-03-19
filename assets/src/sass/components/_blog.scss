@@ -63,3 +63,46 @@ header.page-header {
     }
   }
 }
+
+.page__top-level {
+  padding: 90px 0;
+  color: $font-color;
+
+  @include mq(xl) {
+    padding: 150px 0;
+  }
+  .grid__procedures {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    @include mq(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+    .procedure--preview {
+      padding: 0 15px 15px;
+      display: flex;
+      flex-direction: column;
+      @include mq(sm) {
+        padding: 25px;
+        box-shadow: rgba($black, 0.1) 5px 5px 20px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 25px;
+
+        h2 {
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+        }
+      }
+      .card--bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+      }
+    }
+  }
+}

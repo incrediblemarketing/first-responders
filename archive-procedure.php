@@ -12,41 +12,39 @@
  * @since      1.0.0
  */
 
-$current_id = get_the_ID();
 get_header();  ?>
 <?php get_template_part( 'components/page-header' ); ?>
-<div class="container page__top-level">
-  <div class="row justify-content-center section__padding">
-	  <div class="col-12">
+<div class="container page__top-level padding--section">
+	<div class="row justify-content-center">
+		<div class="col-12">
 		<?php
 		$args  = array(
 			'post_type'   => 'procedure',
 			'order'       => 'ASC',
 			'orderby'     => 'menu_order',
-			'post_parent' => $current_id,
+			'post_parent' => 0,
 		);
 		$query = new WP_Query( $args );
 		?>
-	  <?php if ( $query->have_posts() ) : ?>
-	  <div class="grid__procedures">
+		<?php if ( $query->have_posts() ) : ?>
+		<div class="grid__procedures">
 			<?php while ( $query->have_posts() ) : ?>
 				<?php $query->the_post(); ?>
 			<div class="procedure--preview">
 				<?php if ( has_post_thumbnail() ) : ?>
 					<?php echo get_the_post_thumbnail( 'featured_thumb' ); ?>
-			  <?php else : ?>
-				  <?php im_the_placeholder_image( 'featured_thumb' ); ?>
-			  <?php endif; ?>
-			  <div class="card--bottom">
-				<h2><?php echo esc_attr( get_the_title() ); ?></h2>
-				<a href="<?php echo esc_url( get_the_permalink() ); ?>" class="btn btn-secondary">Learn More</a>
-			  </div>
+				<?php else : ?>
+					<?php im_the_placeholder_image( 'featured_thumb' ); ?>
+				<?php endif; ?>
+				<div class="card--bottom">
+					<h2><?php echo esc_attr( get_the_title() ); ?></h2>
+					<a href="<?php echo esc_url( get_the_permalink() ); ?>" class="btn btn-secondary">Learn More</a>
+				</div>
 			</div>
 		<?php endwhile; ?> 
-	  </div>
+		</div>
 		<?php endif; ?>  
-		<?php wp_reset_postdata(); ?>
-	  </div>
-  </div>
+		</div>
+	</div>
 </div>
 <?php get_footer(); ?>

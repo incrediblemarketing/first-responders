@@ -12,7 +12,7 @@
  */
 
 $image = get_field( 'contact_block_image', 'option' );
-$text  = get_field( 'bottom_block_text' ) ;
+$text  = get_field( 'bottom_block_text' ) ?: get_field( 'contact_block_text', 'option' );
 ?>
 
 <section class="block block--frw">
