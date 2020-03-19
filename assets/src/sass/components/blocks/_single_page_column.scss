@@ -1,10 +1,26 @@
 .block-single_page_column {
   position: relative;
+  .image--holder {
+    position: relative;
+    height: auto;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
   .padding--inner {
-    padding: 122px 65px;
+    padding: 90px 0;
     background: $white;
-    transform: translateY(-150px);
-    margin-bottom: -150px;
+    @include mq(sm) {
+      padding: 90px 35px;
+      transform: translateY(-10vh);
+      margin-bottom: -10vh;
+    }
+    @include mq(xl) {
+      padding: 11vh 3.5vw;
+      transform: translateY(-14vh);
+      margin-bottom: -14vh;
+    }
 
     ul {
       padding: 50px 0;
@@ -12,8 +28,11 @@
       border-bottom: 1px solid #dddddd;
       margin: 50px 0;
       list-style: none;
-      column-count: 2;
+      column-count: 1;
       column-gap: 60px;
+      @include mq(md) {
+        column-count: 2;
+      }
 
       li {
         position: relative;
@@ -32,7 +51,13 @@
       }
     }
     h2:not(:first-of-type) {
-      margin-top: 120px;
+      margin-top: 50px;
+      @include mq(md) {
+        margin-top: 90px;
+      }
+      @include mq(xxl) {
+        margin-top: 120px;
+      }
     }
   }
 }

@@ -34,7 +34,7 @@
       object-fit: cover;
       opacity: 0.9;
       object-position: 66%;
-      @include mq(lg) {
+      @include mq(xl) {
         object-position: right;
       }
     }

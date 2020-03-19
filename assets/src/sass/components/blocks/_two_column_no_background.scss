@@ -1,11 +1,18 @@
 .block-two_column_no_background {
-  padding: 158px 0 100px;
+  padding: 90px 0;
   color: $font-color;
 
+  @include mq(xl) {
+    padding: 158px 0 100px;
+  }
   .content--1 {
-    padding-right: 30px;
+    @include mq(lg) {
+      padding-right: 30px;
+    }
   }
   .content--2 {
-    padding-left: 30px;
+    @include mq(lg) {
+      padding-left: 30px;
+    }
   }
 }

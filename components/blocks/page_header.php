@@ -24,11 +24,11 @@ $image     = get_sub_field( 'background_image' ) ?: get_field( 'header_image', '
 
 <div class="container">
 	<div class="row padding--section">
-		<div class="col-lg-6 content--1">
+		<div class="col-lg-6 content--1 col-12">
 			<h1><?php echo get_the_title(); ?></h1>
 			<?php echo $content_1; ?>
 		</div>
-		<div class="col-lg-6 content--2">
+		<div class="col-lg-6 content--2 col-12">
 			<?php echo $content_2; ?>
 		</div>
 	</div>

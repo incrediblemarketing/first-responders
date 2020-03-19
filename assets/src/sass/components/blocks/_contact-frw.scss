@@ -2,10 +2,17 @@
   position: relative;
   background: #041c4a;
   overflow: hidden;
-  padding: 626px 0 60px;
+  padding: 60px 0;
   color: $white;
   text-align: center;
   z-index: 0;
+  @include mq(md) {
+    padding: 35vh 0 60px;
+  }
+
+  @include mq(xxl) {
+    padding: 56vh 0 60px;
+  }
 
   .image--holder {
     @include absolute_cover;

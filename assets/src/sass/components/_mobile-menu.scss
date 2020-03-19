@@ -5,7 +5,7 @@
   height: 100%;
   left: -100%;
   opacity: 0;
-  padding: 60px 15px;
+  padding: 20px 15px;
   background-attachment: unset;
   background: url(/wp-content/uploads/2020/03/dark-angles.jpg) no-repeat center /
     cover;
@@ -49,6 +49,9 @@
       top: 60px;
       right: 45px;
     }
+    &:focus {
+      outline: none;
+    }
 
     span {
       height: 3px;
@@ -66,7 +69,7 @@
   }
   .menu {
     padding: 0;
-    margin: 45px 0;
+    margin: 25px 0;
     list-style: none;
     max-height: 70%;
     height: 70%;
@@ -74,9 +77,6 @@
     text-align: center;
     @media screen and (max-height: 600px) {
       max-height: 49%;
-    }
-    @include mq($until: md) {
-      margin-top: 15px;
     }
     li {
       font-size: 24px;

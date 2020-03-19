@@ -2,7 +2,13 @@
   background: $blue;
   color: $white;
   .block--blue {
-    padding: 122px 0 92px;
+    padding: 90px 15px;
+    @include mq(sm) {
+      padding: 90px 0;
+    }
+    @include mq(xl) {
+      padding: 11vh 0;
+    }
   }
   ul {
     padding: 50px 0;
@@ -10,8 +16,11 @@
     border-bottom: 1px solid #dddddd;
     margin: 50px 0;
     list-style: none;
-    column-count: 2;
+    column-count: 1;
     column-gap: 60px;
+    @include mq(md) {
+      column-count: 2;
+    }
 
     li {
       position: relative;

@@ -2,11 +2,16 @@
   position: relative;
   background: #041c4a;
   overflow: hidden;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 59px;
   color: $white;
+  padding: 300px 0 60px;
+  @include mq(md) {
+    padding-top: 0;
+    padding-bottom: 59px;
+    height: 100vh;
+  }
 
   .image--holder {
     @include absolute_cover;
@@ -21,13 +26,28 @@
         rgba(32, 32, 32, 0.0001) 0%,
         #202020 100%
       );
-      opacity: 0.46;
+      opacity: 0.8;
+      @include mq(xxl) {
+        opacity: 0.46;
+      }
     }
   }
   h1 {
     position: relative;
-    left: -100px;
-    width: calc(100% + 100px);
+    left: 0;
+    width: 100%;
+    @include mq(md) {
+      left: -30px;
+      width: calc(100% + 30px);
+    }
+    @include mq(xl) {
+      left: -70px;
+      width: calc(100% + 70px);
+    }
+    @include mq(xxl) {
+      left: -100px;
+      width: calc(100% + 100px);
+    }
 
     body:not(.home) & {
       font-size: 3rem;
@@ -36,10 +56,15 @@
     }
   }
   .content--1 {
-    padding-right: 30px;
+    margin-bottom: 25px;
+    @include mq(lg) {
+      padding-right: 30px;
+    }
   }
   .content--2 {
-    padding-left: 30px;
-    margin-top: calc(3.65rem + 28px);
+    @include mq(lg) {
+      padding-left: 30px;
+      margin-top: calc(3.65rem + 28px);
+    }
   }
 }
