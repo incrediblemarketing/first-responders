@@ -21,9 +21,10 @@
 	$phone_url    = get_field( 'business_phone_url', 'option' );
 	$image        = get_field( 'footer_background_image', 'option' )
 ?>
-<?php if ( ! is_front_page() ) : ?>
+<?php if ( ! is_front_page() && ! is_page( 'contact' ) && ! im_is_blog() ) : ?>
 	<?php get_template_part( 'components/contact-frw' ); ?>
 <?php endif; ?>
+<?php if ( ! is_page( 'contact' ) ) : ?>
 <section class="block block--contact-us">
 	<?php if ( ! empty( $image ) ) : ?>
 		<div class="image--holder">
@@ -55,6 +56,7 @@
 		</div>
 	</div>
 </section>
+<?php endif; ?>
 <footer>
 	<?php get_template_part( 'components/svg/flag' ); ?>
 	<p>Copyright &copy; <?php echo esc_attr( gmdate( 'Y' ) ); ?> <?php echo esc_attr( $copyright ) ?: esc_attr( get_bloginfo() ); ?>. All Rigths Reserved.</p>

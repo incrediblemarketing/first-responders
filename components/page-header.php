@@ -25,7 +25,7 @@ if ( is_single() && 'team_member' === get_post_type( $postid ) ) {
 
 <header
 	class="page-header"
-	<?php echo $background_image ? 'data-bg-image="' . esc_url( $background_image ) . '"' : ''; ?>
+	<?php echo $background_image ? 'data-bg-image="' . $background_image['sizes']['hero_thumb'] . '"' : ''; ?>
 	>
 	<h1>
 		<?php if ( is_home() ) : ?>

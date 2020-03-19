@@ -1,11 +1,14 @@
-.block-single_page_column {
+.block-single_page_column,
+.block--blog-single {
   position: relative;
   .image--holder {
     position: relative;
     height: auto;
+    width: 100%;
     img {
       max-width: 100%;
       height: auto;
+      width: 100%;
     }
   }
   .padding--inner {

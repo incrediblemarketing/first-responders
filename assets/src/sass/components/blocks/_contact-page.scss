@@ -1,0 +1,86 @@
+.block--contact-page {
+  position: relative;
+  background: #041c4a;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  color: $white;
+  padding: 300px 0 60px;
+  @include mq(md) {
+    padding-top: 0;
+    padding-bottom: 59px;
+    height: 100vh;
+  }
+
+  .image--holder {
+    @include absolute_cover;
+    img {
+      @include absolute_cover;
+      object-fit: cover;
+    }
+    &::after {
+      @include pseudo_cover();
+      background: linear-gradient(
+        180deg,
+        rgba(32, 32, 32, 0.0001) 0%,
+        #202020 100%
+      );
+      opacity: 0.8;
+      @include mq(xxl) {
+        opacity: 0.46;
+      }
+    }
+  }
+  h1 {
+    position: relative;
+    font-size: 2rem;
+    line-height: 1.2em;
+    margin-bottom: 25px;
+  }
+
+  .content--1 {
+    margin-bottom: 25px;
+    @include mq(lg) {
+      padding-right: 30px;
+    }
+  }
+  .content--2 {
+    @include mq(lg) {
+      padding-left: 30px;
+    }
+  }
+  .contact--container {
+    display: flex;
+    background: rgba($white, 0.9);
+    color: $black;
+    padding: 60px 3.5vw;
+
+    a {
+      color: $slight_black;
+    }
+    p {
+      margin-bottom: 25px;
+      i {
+        margin-right: 8px;
+      }
+    }
+  }
+  .gform_wrapper {
+    ul.gform_fields {
+      li.gfield {
+        div.ginput_container {
+          input,
+          textarea {
+            padding: 0 0 6px 40px !important;
+            border-bottom: 1px solid $slight_black;
+            font-size: 1rem !important;
+          }
+          textarea {
+            height: 90px;
+          }
+        }
+      }
+    }
+  }
+}
