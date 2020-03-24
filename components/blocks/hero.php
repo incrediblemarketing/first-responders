@@ -29,6 +29,7 @@ $business_phone_url     = get_field( 'business_phone_url', 'options' );
 			<?php if ( $business_phone_display && $business_phone_url ) : ?>
 				<a class="btn btn-primary" href="tel:<?php echo esc_attr( $business_phone_url ); ?>">Call <?php echo esc_attr( $business_phone_display ); ?></a>
 			<?php endif; ?>
+				<a href="/blog/" class="btn btn-primary">View Blog</a>
 			<br/>
 			<a href="#block-5e603523d1836" class="js-scroll-to">
 				<div class="more">

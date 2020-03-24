@@ -25,6 +25,11 @@
   }
   .btn {
     margin-bottom: 11vh;
+    min-width: 200px;
+    @include mq($until: md) {
+      min-width: 150px;
+      padding: 18px;
+    }
   }
   .image--holder {
     @include absolute_cover;

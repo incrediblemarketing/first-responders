@@ -24,7 +24,8 @@ header.page-header {
       box-shadow: rgba($black, 0.1) 5px 5px 20px;
     }
     @include mq(lg) {
-      display: flex;
+      display: grid;
+      grid-template-columns: auto 1fr;
     }
 
     img {
@@ -60,6 +61,12 @@ header.page-header {
     @include mq($until: md) {
       padding-left: 15px;
       padding-right: 15px;
+    }
+  }
+  nav.navigation-single {
+    padding: 35px;
+    a {
+      color: $black;
     }
   }
 }

@@ -25,7 +25,21 @@
           this.siteNavSticky();
 					this.swiperSetup();
 					this.mobileMenu();
-        },
+					this.youtubeHelp();
+				},
+				youtubeHelp: function(){
+
+						$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+							disableOn: 700,
+							type: 'iframe',
+							mainClass: 'mfp-fade',
+							removalDelay: 160,
+							preloader: false,
+		
+							fixedContentPos: false
+						});
+				
+				},
         siteNavSticky: function() {
           $cache.window.scroll(function() {
             if ($cache.window.scrollTop() > 0) {
