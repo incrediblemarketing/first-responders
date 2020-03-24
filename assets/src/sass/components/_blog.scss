@@ -19,6 +19,7 @@ header.page-header {
   article {
     display: block;
     padding: 0 15px 15px;
+    margin-bottom: 35px;
     @include mq(sm) {
       padding: 25px;
       box-shadow: rgba($black, 0.1) 5px 5px 20px;
