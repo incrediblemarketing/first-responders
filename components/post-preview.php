@@ -13,7 +13,7 @@
 
 ?>
 <article class="post-preview" id="post-<?php the_ID(); ?>">
-	<div class="item">
+	<div class="item post-preview-thumbnail">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 			<?php the_post_thumbnail( 'blog_row_thumb' ); ?>

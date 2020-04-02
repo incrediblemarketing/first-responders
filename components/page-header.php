@@ -14,6 +14,7 @@
 $postid           = get_the_id();
 $page_title       = get_the_title( $postid );
 $background_image = get_field( 'page_header_background_image', $postid ) ?: get_field( 'header_image', 'options' );
+$hero_thumb				= $background_image['sizes']['hero_thumb'];
 
 if ( is_home() ) {
 	$postid = get_option( 'page_for_posts' );
@@ -25,7 +26,7 @@ if ( is_single() && 'team_member' === get_post_type( $postid ) ) {
 
 <header
 	class="page-header"
-	<?php echo $background_image ? 'data-bg-image="' . $background_image['sizes']['hero_thumb'] . '"' : ''; ?>
+	<?php echo $background_image ? 'data-bg-image="' . $hero_thumb . '"' : ''; ?>
 	>
 	<h1>
 		<?php if ( is_home() ) : ?>

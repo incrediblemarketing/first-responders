@@ -26,8 +26,8 @@ $gallery     = get_sub_field( 'certifications' );
 
 <div class="container-fluid">
 	<?php get_template_part( 'components/svg/flag' ); ?>
-	<div class="row padding--section">
-		<div class="col-xxl-4 offset-xl-1 col-xl-5 col-md-6 content--1">
+	<div class="row padding--section justify-content-center">
+		<div class="col-xxl-4 col-xl-5 col-md-6 content--1">
 			<?php echo $content_1; ?>
 			<?php if ( $gallery ) : ?>
 				<div class="d-flex">
