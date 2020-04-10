@@ -33,7 +33,7 @@ get_header();  ?>
 				<?php $query->the_post(); ?>
 			<div class="procedure--preview">
 				<?php if ( has_post_thumbnail() ) : ?>
-					<?php echo get_the_post_thumbnail( 'featured_thumb' ); ?>
+					<?php echo get_the_post_thumbnail( $post->ID, 'featured_thumb' ); ?>
 			  <?php else : ?>
 				  <?php im_the_placeholder_image( 'featured_thumb' ); ?>
 			  <?php endif; ?>
