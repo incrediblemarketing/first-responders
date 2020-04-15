@@ -33,3 +33,29 @@
     margin-top: 15px;
   }
 }
+
+.block--child-page {
+  display: block;
+  align-items: center;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #dddddd;
+
+  @include mq(lg) {
+    display: flex;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 25px;
+
+    @include mq(lg) {
+      margin-right: 3vw;
+      max-width: 45%;
+      margin-bottom: 0;
+    }
+  }
+}

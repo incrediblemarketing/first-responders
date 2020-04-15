@@ -30,7 +30,9 @@ function shortcode_child_pages() {
 		if ( $pages->have_posts() ) :
 			while ( $pages->have_posts() ) :
 				$pages->the_post();
-					$content .= '<h2><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>';
+					$content .= '<div class="block--child-page">';
+					$content .= get_the_post_thumbnail( $post->ID, 'featured_thumb' );
+					$content .= '<div class="content"><h2><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>';
 				if ( have_rows( 'blocks' ) ) :
 					while ( have_rows( 'blocks' ) ) :
 						the_row();
@@ -43,8 +45,7 @@ function shortcode_child_pages() {
 								endif;
 							endwhile;
 						endif;
-						$content .= '<a href="' . get_the_permalink() . '" class="btn btn-secondary">Learn More</a>';
-						$content .= '<hr class="show"/>';
+						$content .= '<a href="' . get_the_permalink() . '" class="btn btn-secondary">Learn More</a></div></div>';
 				endwhile;
 				wp_reset_postdata();
 		endif;
