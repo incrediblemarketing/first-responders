@@ -11,15 +11,34 @@
  * @since      1.0.0
  */
 
-$content_1   = get_sub_field( 'content_1' );
-$content_2   = get_sub_field( 'content_2' );
+$content_1 = get_sub_field( 'content_1' );
+$content_2 = get_sub_field( 'content_2' );
+$content_3 = get_sub_field( 'content_3' );
+$content_4 = get_sub_field( 'content_4' );
+
 $block_title = get_sub_field( 'title' );
 ?>
 
 <div class="container">
 	<div class="row padding--section">
+		<?php if ( ! empty( $content_4 ) ) : ?>
+			<div class="col-lg-6 content--1">
+				<?php echo $content_3; ?>
+			</div>
+			<div class="col-lg-6 content--2">
+				<?php echo $content_4; ?>
+			</div>
+			<hr/>
+			<?php elseif ( ! empty( $content_3 ) ) : ?>
+			<div class="col-12 content--1">
+				<?php echo $content_3; ?>
+			</div>
+			<hr/>
+		<?php endif; ?>
 		<div class="col-12">
-			<h2><?php echo esc_attr( $block_title ); ?></h2>
+				<?php if ( $block_title ) : ?>
+					<h2><?php echo esc_attr( $block_title ); ?></h2>
+				<?php endif; ?>
 		</div>
 		<?php if ( ! empty( $content_2 ) ) : ?>
 			<div class="col-lg-6 content--1">

@@ -29,6 +29,12 @@
     @include mq($until: md) {
       min-width: 150px;
       padding: 18px;
+      margin-bottom: 15px;
+      width: 100%;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
   .image--holder {

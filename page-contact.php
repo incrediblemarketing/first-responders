@@ -33,7 +33,7 @@ $image        = get_field( 'page_header_background_image' ) ?: get_field( 'heade
 					<div class="item content--1">
 						<?php if ( have_posts() ) : ?>
 							<?php while ( have_posts() ) : ?>
-								<h1>Schedule an Appointment</h1>
+								<h1>Contact Us</h1>
 								<?php the_post(); ?>
 								<?php if ( $phone_url && $phone ) : ?>
 									<p><i class="fas fa-phone"></i> <a href="tel:<?php echo esc_attr( $phone_url ); ?>"><?php echo esc_attr( $phone ); ?></a></p>

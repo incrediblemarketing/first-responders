@@ -30,11 +30,15 @@ function shortcode_staff() {
 		while ( $staff->have_posts() ) :
 			$staff->the_post();
 			$content .= '<div class="block__team-member">';
-			$content .= get_the_post_thumbnail( $post->ID, 'featured_thumb' );
-			$content .= '<h3>' . get_the_title() . '</h3>';
-			$content .= '<h5>' . get_sub_field( 'job_title' ) . '</h5>';
+			if ( has_post_thumbnail( $post->ID ) ) :
+				$content .= get_the_post_thumbnail( $post->ID, 'staff_thumb' );
+			else :
+				$content .= '<img src="//placehold.it/350x350/#000/#fff" alt="">';
+			endif;
+			$content .= '<div class="content--area"><h3>' . get_the_title() . '</h3>';
+			$content .= '<h5>' . get_sub_field( 'position' ) . '</h5>';
 			$content .= get_the_content();
-			$content .= '</div>';
+			$content .= '</div></div>';
 			endwhile;
 		wp_reset_postdata();
 		endif;

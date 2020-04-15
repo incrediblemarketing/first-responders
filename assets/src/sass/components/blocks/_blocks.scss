@@ -1,1 +1,35 @@
-.block {position:relative;}
+.block {
+  position: relative;
+}
+
+.block__team-member {
+  display: flex;
+  align-items: center;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #dddddd;
+
+  @include mq($until: lg) {
+    flex-direction: column;
+  }
+
+  &:last-of-type() {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  img {
+    margin-right: 3vw;
+    border-radius: 100em;
+  }
+  h3 {
+    margin-bottom: 10px;
+  }
+  h5 {
+    margin-bottom: 15px;
+  }
+  p {
+    margin-top: 15px;
+  }
+}

@@ -50,21 +50,13 @@
     }
 
     body:not(.home) & {
-      font-size: 3rem;
+      font-size: 13vw;
       line-height: 1.21em;
-      margin-bottom: 28px;
-    }
-  }
-  .content--1 {
-    margin-bottom: 25px;
-    @include mq(lg) {
-      padding-right: 30px;
-    }
-  }
-  .content--2 {
-    @include mq(lg) {
-      padding-left: 30px;
-      margin-top: calc(3.65rem + 28px);
+      margin-bottom: 35px;
+
+      @include mq(lg) {
+        font-size: 5vw;
+      }
     }
   }
 }
