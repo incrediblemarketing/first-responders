@@ -14,13 +14,18 @@
 $postid           = get_the_id();
 $page_title       = get_the_title( $postid );
 $background_image = get_field( 'page_header_background_image', $postid ) ?: get_field( 'header_image', 'options' );
-$hero_thumb				= $background_image['sizes']['hero_thumb'];
+$hero_thumb       = $background_image['sizes']['hero_thumb'];
 
 if ( is_home() ) {
 	$postid = get_option( 'page_for_posts' );
 }
 if ( is_single() && 'team_member' === get_post_type( $postid ) ) {
 	$page_title = 'Staff';
+}
+
+if ( is_home() ) {
+	$background_image = get_field( 'blog_image', 'options' );
+	$hero_thumb       = $background_image['sizes']['hero_thumb'];
 }
 ?>
 

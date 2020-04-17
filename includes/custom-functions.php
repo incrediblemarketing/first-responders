@@ -19,6 +19,14 @@ function im_is_blog() {
 }
 
 /**
+ * Check if blog page
+ */
+function is_blog() {
+	return ( is_home() );
+}
+
+
+/**
  * Get top level page id.
  */
 function get_top_level_id() {

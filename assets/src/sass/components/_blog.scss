@@ -2,8 +2,23 @@ header.page-header {
   padding: 300px 15px 100px;
   text-align: center;
   background-size: cover;
+  z-index: 0;
+  position: relative;
   h1 {
     color: $white;
+  }
+  &::after {
+    @include pseudo_cover();
+    background: linear-gradient(
+      180deg,
+      rgba(32, 32, 32, 0.0001) 0%,
+      #202020 100%
+    );
+    opacity: 0.8;
+    @include mq(xxl) {
+      opacity: 0.46;
+    }
+    z-index: -1;
   }
 }
 .block--blog {
