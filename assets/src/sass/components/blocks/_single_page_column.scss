@@ -16,13 +16,9 @@
     background: $white;
     @include mq(sm) {
       padding: 90px 35px;
-      transform: translateY(-10vh);
-      margin-bottom: -10vh;
     }
     @include mq(xl) {
       padding: 11vh 3.5vw;
-      transform: translateY(-14vh);
-      margin-bottom: -14vh;
     }
 
     ul,
