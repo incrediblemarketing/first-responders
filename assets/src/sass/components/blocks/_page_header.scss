@@ -34,29 +34,18 @@
   }
   h1 {
     position: relative;
-    left: 0;
-    width: 100%;
-    @include mq(md) {
-      left: -30px;
-      width: calc(100% + 30px);
-    }
-    @include mq(xl) {
-      left: -70px;
-      width: calc(100% + 70px);
-    }
-    @include mq(xxl) {
-      left: -100px;
-      width: calc(100% + 100px);
-    }
 
     body:not(.home) & {
-      font-size: 13vw;
+      font-size: 4rem;
       line-height: 1.21em;
       margin-bottom: 35px;
+    }
+  }
 
-      @include mq(lg) {
-        font-size: 5vw;
-      }
+  .padding--section {
+    padding: 0 15px;
+    @include mq(sm) {
+      padding: 0 4vw;
     }
   }
 }

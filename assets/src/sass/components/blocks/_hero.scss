@@ -5,6 +5,8 @@
   display: flex;
   align-items: flex-end;
   padding-bottom: 5vh;
+  z-index: 0;
+
   @include mq($until: md) {
     text-align: center;
   }
@@ -40,6 +42,7 @@
   .image--holder {
     @include absolute_cover;
     background: $blue;
+    z-index: -1;
     img {
       @include absolute_cover;
       object-fit: cover;
@@ -48,6 +51,14 @@
       @include mq(xl) {
         object-position: right;
       }
+    }
+    #fs-video {
+      @include absolute_cover;
+      min-width: 100vw;
+      min-height: 100%;
+      width: 100vw;
+      object-fit: cover;
+      z-index: 1;
     }
   }
   a.js-scroll-to {

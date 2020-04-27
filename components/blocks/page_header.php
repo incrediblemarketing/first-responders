@@ -22,9 +22,9 @@ $image     = get_sub_field( 'background_image' ) ?: get_field( 'header_image', '
 	</div>
 <?php endif; ?>
 
-<div class="container">
+<div class="container-fluid">
 	<div class="row padding--section">
-		<div class="col-12">
+		<div class="col-12 px-0">
 			<h1><?php echo get_the_title(); ?></h1>
 		</div>
 	</div>

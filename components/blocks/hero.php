@@ -13,12 +13,20 @@
 
 $content                = get_sub_field( 'content' );
 $image                  = get_sub_field( 'background_image' );
+$video                  = get_sub_field( 'background_video' );
 $business_phone_display = get_field( 'business_phone_display', 'options' );
 $business_phone_url     = get_field( 'business_phone_url', 'options' );
 ?>
-<?php if ( ! empty( $image ) ) : ?>
+<?php if ( $image || $video ) : ?>
 	<div class="image--holder">
-		<img src="<?php echo esc_url( $image['sizes']['hero_thumb'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+		<?php if ( $video ) : ?>
+			<video autoplay muted loop id="fs-video">
+				<source src="<?php echo $video; ?>" type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video>
+		<?php else : ?>	
+			<img src="<?php echo esc_url( $image['sizes']['hero_thumb'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+		<?php endif; ?>
 	</div>
 <?php endif; ?>
 
