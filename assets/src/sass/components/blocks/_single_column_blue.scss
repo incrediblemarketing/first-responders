@@ -1,6 +1,4 @@
 .block-single_column_blue {
-  background: $blue;
-  color: $white;
   .block--blue {
     padding: 90px 15px;
     @include mq(sm) {
@@ -44,4 +42,9 @@
       height: auto;
     }
   }
+}
+
+.blue--section {
+  background: $blue;
+  color: $white;
 }
