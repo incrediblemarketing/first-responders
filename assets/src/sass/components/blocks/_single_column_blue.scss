@@ -42,6 +42,15 @@
       height: auto;
     }
   }
+  h2:not(:first-of-type) {
+    margin-top: 50px;
+    @include mq(md) {
+      margin-top: 90px;
+    }
+    @include mq(xxl) {
+      margin-top: 120px;
+    }
+  }
 }
 
 .blue--section {
