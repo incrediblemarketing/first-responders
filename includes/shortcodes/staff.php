@@ -27,6 +27,7 @@ function shortcode_staff() {
 	$staff   = new WP_Query( $args );
 	$content = '';
 	if ( $staff->have_posts() ) :
+		$content .= '<div class="team--flex">';
 		while ( $staff->have_posts() ) :
 			$staff->the_post();
 			$content .= '<div class="block__team-member">';
@@ -35,11 +36,12 @@ function shortcode_staff() {
 			else :
 				$content .= '<img src="//placehold.it/350x350/#000/#fff" alt="">';
 			endif;
-			$content .= '<div class="content--area"><h3>' . get_the_title() . '</h3>';
-			$content .= '<h5>' . get_sub_field( 'position' ) . '</h5>';
-			$content .= get_the_content();
-			$content .= '</div></div>';
+			$content .= '<h3>' . get_the_title() . '</h3>';
+			$content .= '<h5>' . get_field( 'positions' ) . '</h5>';
+			$content .= '<a href="' . get_the_permalink() . '" class="btn btn-secondary">View Bio</a>';
+			$content .= '</div>';
 			endwhile;
+		$content .= '</div>';
 		wp_reset_postdata();
 		endif;
 

@@ -65,20 +65,15 @@ $business_phone_url     = get_field( 'business_phone_url', 'options' );
 		<div class="col-xl-8 col-lg-10">
 				<h3 class="fade-in-bottom"><?php echo $bottom_title; ?></h3>
 				<?php if ( $testimonials ) : ?>
-					<div class="swiper-container testimonial--slider">
-						<div class="swiper-wrapper">
 							<?php foreach ( $testimonials as $post ) : ?>
 								<?php setup_postdata( $post ); ?>
-								<div class="swiper-slide testimonial--single">
+								<div class="testimonial--single">
 									<?php get_template_part( 'components/svg/quote-left' ); ?>
 									<h5><?php the_title(); ?></h5>
 									<?php get_template_part( 'components/svg/stars' ); ?>
 									<?php the_content(); ?>
 								</div>
 							<?php endforeach; ?>
-						</div>
-						<?php get_template_part( 'components/swiper-nav' ); ?>
-					</div>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 		</div>
