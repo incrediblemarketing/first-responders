@@ -55,6 +55,11 @@
     background: rgba($white, 0.9);
     color: $black;
     padding: 60px 3.5vw;
+    flex-direction: column;
+
+    @include mq(md) {
+      flex-direction: row;
+    }
 
     a {
       color: $slight_black;
