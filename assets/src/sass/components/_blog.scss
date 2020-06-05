@@ -82,8 +82,24 @@ header.page-header {
   }
   nav.navigation-single {
     padding: 35px;
+    display: block !important;
+
+    @include mq(md) {
+      display: flex !important;
+    }
+
     a {
       color: $black;
+      max-width: 100%;
+      margin-bottom: 20px;
+      display: block;
+      text-align: center;
+
+      @include mq(md) {
+        margin: 0;
+        max-width: 50%;
+        text-align: unset;
+      }
     }
   }
 }

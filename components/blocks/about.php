@@ -27,7 +27,7 @@ $gallery     = get_sub_field( 'certifications' );
 <div class="container-fluid">
 	<?php get_template_part( 'components/svg/flag' ); ?>
 	<div class="row padding--section justify-content-center">
-		<div class="col-xxl-4 col-xl-5 col-md-6 content--1">
+		<div class="col-xxl-10 col-xl-10 col-md-10 content--1">
 			<?php echo $content_1; ?>
 			<?php if ( $gallery ) : ?>
 				<div class="d-flex">
@@ -37,9 +37,11 @@ $gallery     = get_sub_field( 'certifications' );
 				</div>
 			<?php endif; ?>
 		</div>
-		<div class="col-xxl-4 col-xl-5 col-md-6 content--2">
-			<?php echo $content_2; ?>
-		</div>
+		<?php if ( $content_2 ) : ?>
+			<div class="col-xxl-4 col-xl-5 col-md-6 content--2">
+				<?php echo $content_2; ?>
+			</div>
+		<?php endif; ?>
 	</div>
 </div>
 

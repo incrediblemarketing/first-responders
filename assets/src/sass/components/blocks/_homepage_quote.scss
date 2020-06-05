@@ -61,7 +61,11 @@
 
   &.section__small {
     .padding--section {
-      padding: 10vh;
+      padding: 80px 0;
+
+      @include mq(md) {
+        padding: 10vh;
+      }
     }
 
     p {

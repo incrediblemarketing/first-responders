@@ -30,10 +30,11 @@
   }
 
   .content--area {
-    background: rgba(32, 32, 32, 0.9);
+    background: rgba(32, 32, 32, 0.5);
     padding: 25px;
 
     @include mq(md) {
+      background: rgba(32, 32, 32, 0.9);
       padding: 33px 23px 52px 50px;
     }
   }

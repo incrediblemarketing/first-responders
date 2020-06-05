@@ -36,9 +36,13 @@
     position: relative;
 
     body:not(.home) & {
-      font-size: 4rem;
+      font-size: 2.4rem;
       line-height: 1.21em;
       margin-bottom: 35px;
+
+      @include mq(lg) {
+        font-size: 4rem;
+      }
     }
   }
 

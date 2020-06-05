@@ -15,7 +15,11 @@
   }
 
   .padding--section {
-    padding: 0 0 19vh;
+    padding: 0 0 80px;
+
+    @include mq(lg) {
+      padding: 0 0 100px;
+    }
   }
 
   svg {

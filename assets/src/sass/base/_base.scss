@@ -97,11 +97,16 @@ h2 {
     }
   }
   body:not(.home) & {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.225em;
     padding-bottom: 1em;
     margin-bottom: 51px;
     position: relative;
+
+    @include mq(md) {
+      font-size: 2rem;
+    }
+
     &::after {
       content: "";
       display: block;
