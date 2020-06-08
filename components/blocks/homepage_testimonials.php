@@ -68,10 +68,9 @@ $business_phone_url     = get_field( 'business_phone_url', 'options' );
 							<?php foreach ( $testimonials as $post ) : ?>
 								<?php setup_postdata( $post ); ?>
 								<div class="testimonial--single">
-									<?php get_template_part( 'components/svg/quote-left' ); ?>
-									<h5><?php the_title(); ?></h5>
-									<?php get_template_part( 'components/svg/stars' ); ?>
 									<?php the_content(); ?>
+									<?php get_template_part( 'components/svg/stars' ); ?>
+									<h5><?php the_title(); ?></h5>
 								</div>
 							<?php endforeach; ?>
 					<?php wp_reset_postdata(); ?>

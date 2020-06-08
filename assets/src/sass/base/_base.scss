@@ -104,7 +104,7 @@ h2 {
     position: relative;
 
     @include mq(md) {
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
 
     &::after {

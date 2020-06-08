@@ -3,6 +3,11 @@
   overflow: hidden;
   z-index: 0;
 
+  @include mq($until: md) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .image--holder {
     @include absolute_cover;
     img {
@@ -11,15 +16,25 @@
     }
   }
   .homepage--gallery {
-    @include absolute_cover;
     z-index: 0;
-    img {
+    width: 100%;
+
+    @include mq(md) {
       @include absolute_cover;
+    }
+    img {
+      width: 100%;
+      height: auto;
       object-fit: cover;
+      @include mq(md) {
+        @include absolute_cover;
+      }
     }
   }
   .padding--section {
-    padding: 90px 0;
+    @include mq($until: md) {
+      background: $black;
+    }
 
     @include mq(md) {
       padding: 30vh 0 10vh;
@@ -57,9 +72,28 @@
     i {
       font-size: 10px;
       position: relative;
-      top: -3px;
-      margin: 0 8px;
+
+      @include mq(md) {
+        top: -3px;
+        margin: 0 8px;
+      }
     }
+    a {
+      @include mq($until: md) {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  h5 {
+    @include mq($until: md) {
+      margin-bottom: 0;
+    }
+  }
+  h2,
+  h5 {
+    text-align: center;
   }
   p {
     font-size: 0.9rem;
@@ -72,11 +106,14 @@
     width: 100%;
     display: flex;
     color: $white;
-    position: absolute;
     bottom: 0;
     z-index: 9;
     justify-content: center;
     align-items: center;
+
+    @include mq(md) {
+      position: absolute;
+    }
     @include mq(xl) {
       height: 100px;
     }
