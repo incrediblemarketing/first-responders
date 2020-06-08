@@ -11,8 +11,12 @@
 .featured-image {
   margin: 0 auto 35px;
   display: block;
-  max-width: 30vw;
+  max-width: 90%;
   height: auto;
+
+  @include mq(md) {
+    max-width: 30vw;
+  }
 }
 
 .block__team-member {
