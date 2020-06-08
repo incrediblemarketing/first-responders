@@ -33,6 +33,7 @@
 					<div class="padding--inner">
 						<?php the_post_thumbnail( 'parent_thumb', array( 'class' => 'featured-image' ) ); ?>
 						<h2><?php the_title(); ?></h2>
+						<h4><?php echo get_field( 'positions' ); ?></h4>
 						<?php the_content(); ?>
 					</div>
 				</div>
