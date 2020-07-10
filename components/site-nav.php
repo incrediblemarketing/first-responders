@@ -21,6 +21,6 @@
 	<?php get_template_part( 'components/call' ); ?>
 	<button data-toggle="menu">
 		<p>Menu</p>
-		<?php get_template_part( 'components/svg/flag' ); ?>
+		<img src="/wp-content/uploads/2020/07/small-flag.png" class="logo-flag" />
 	</button>
 </nav>

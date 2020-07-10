@@ -113,8 +113,11 @@ footer {
   @include mq(xxl) {
     padding: 36px 19vw;
   }
-  .color-flag {
+  .color-flag,
+  .flag {
     margin-right: 17px;
+    width: 150px;
+    height: auto;
     @include mq(xl) {
       margin-right: 178px;
     }

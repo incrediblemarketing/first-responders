@@ -25,7 +25,7 @@ $gallery     = get_sub_field( 'certifications' );
 <?php endif; ?>
 
 <div class="container-fluid">
-	<?php get_template_part( 'components/svg/flag' ); ?>
+<img src="/wp-content/uploads/2020/07/Flag.png" class="flag" />
 	<div class="row padding--section justify-content-center">
 		<div class="col-xxl-10 col-xl-10 col-md-10 content--1">
 			<?php echo $content_1; ?>

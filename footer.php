@@ -58,7 +58,7 @@
 </section>
 <?php endif; ?>
 <footer>
-	<?php get_template_part( 'components/svg/flag' ); ?>
+	<img src="/wp-content/uploads/2020/07/Flag.png" class="flag" />
 	<p>Copyright &copy; <?php echo esc_attr( gmdate( 'Y' ) ); ?> <?php echo esc_attr( $copyright ) ?: esc_attr( get_bloginfo() ); ?>. All Rights Reserved.</p>
 </footer>
 </div><!-- end of .site-wrap -->
